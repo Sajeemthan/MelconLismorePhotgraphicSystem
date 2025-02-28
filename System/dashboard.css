@@ -1,0 +1,26 @@
+.nav-continer > a {
+    text-decoration: none;
+    color: beige;
+    background-color: rgb(157, 183, 253);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .nav-continer > a:hover {
+    opacity: 0.7;
+  }
+  
+  .searchBox {
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .searchBox > input {
+    border: none;
+    outline: none;
+  }

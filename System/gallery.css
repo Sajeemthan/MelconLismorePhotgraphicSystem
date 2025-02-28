@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --text-dark: #0a0a0a;
+  --text-light: #737373;
+  --extra-light: #f5f5f5;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--extra-light); /* Optional: Adds background color to the body */
+}
+
+/* General Section Styles */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contact Form Styles */
+.contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--text-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+/* Header Styles */
+.header {
+  background-image: url("assets/header.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Navigation Bar Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--text-dark);
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav__links {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--text-dark);
+  transition: transform 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  white-space: nowrap;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.nav__links a:hover {
+  color: orange;
+}
+
+.nav__links .btn {
+  color: var(--white);
+  background-color: transparent;
+  border: 1px solid var(--white);
+}
+
+.nav__links .btn:hover {
+  color: var(--text-dark);
+  background-color: var(--white);
+  border-color: var(--white);
+}
+
+/* Gallery Styles */
+.gallery {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust size as needed */
+  gap: 1rem;
+}
+
+/* Gallery Styles */
+.gallery__grid {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust size as needed */
+  gap: 1rem;
+}
+
+.gallery__item {
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #eee; /* Optional: Background color for empty areas */
+  border-radius: 8px; /* Optional: Rounded corners for gallery items */
+  display: flex;
+  justify-content: center; /* Center-aligns the image horizontally */
+  align-items: center; /* Center-aligns the image vertically */
+  text-align: center;
+}
+
+.gallery__item img {
+  max-width: 100%; /* Ensure the image does not exceed the item’s width */
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  transition: transform 0.3s ease;
+}
+
+.gallery__item:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.gallery__item .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border-top: 1px solid #fff; /* Optional: Adds a border above the description */
+}
+
